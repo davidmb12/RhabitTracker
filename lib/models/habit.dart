@@ -6,11 +6,10 @@ class Habit{
   late String habitName;
   late Color habitColor;
   late DateTime startDate;
-  late Duration habitDuration;
   List<int> days=[0,0,0,0,0,0,0];
-  late List<HourFormat> reminders;
+  late List<DateTime> reminders;
 
-  Habit({required this.habitName,required this.habitColor,required this.startDate,required this.habitDuration,required this.days,required this.reminders});
+  Habit({required this.habitName,required this.habitColor,required this.startDate,required this.days,required this.reminders});
 
   factory Habit.fromJson(Map<String,dynamic> parsedJson){
     return Habit(
@@ -18,7 +17,6 @@ class Habit{
       days: parsedJson['days'] ?? "",
       startDate: parsedJson['startDate'] ?? "",
       reminders: parsedJson['reminders'] ?? "",
-      habitDuration: parsedJson['habitDuration'] ?? "",
       habitColor: parsedJson['habitColor'] ?? "",
 
     );
@@ -29,7 +27,6 @@ class Habit{
       "habitName":this.habitName,
       "habitColor":this.habitColor,
       "startDate":this.startDate,
-      "habitDuration":this.habitDuration,
       "days":this.days,
       "reminders":this.reminders,
     };

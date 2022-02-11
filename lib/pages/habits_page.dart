@@ -17,6 +17,11 @@ class _HabitsPageState extends State<HabitsPage> {
       children: [
         Padding(
           padding: EdgeInsets.all(queryData.size.height/20),
+          child:Container(
+            decoration: BoxDecoration(
+              
+            ),
+          )
          
         ),
         Expanded(

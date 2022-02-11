@@ -8,10 +8,15 @@ class CalendarPage extends StatefulWidget {
 }
 
 class _CalendarPageState extends State<CalendarPage> {
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child:Text('Calendario')
+    var queryData=MediaQuery.of(context);
+    return Padding(
+      padding: EdgeInsets.fromLTRB(queryData.size.width/20, queryData.size.height/15, 0, 0),
+      child: Container(
+          child:Text('Calendario')
+      ),
     );
   }
 }
